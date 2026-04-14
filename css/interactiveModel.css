@@ -1,0 +1,220 @@
+#container3D{
+    inset:0;
+}
+
+#progress-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progress {
+    font-size: 3em;
+    color: #535d67;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+
+.model{
+    padding-right: auto;
+    cursor: grab;
+}
+
+.model:active{
+    cursor: grabbing;
+}
+
+#icon-overlay {
+    top: 200px;
+    right: 200px;
+    z-index: 1000;
+    pointer-events: none; 
+}
+
+.overlay-icon {
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+
+.modelText{
+    padding: 40px;
+}
+
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    padding-right: 90px;
+ }
+ #slider input[type=radio] {
+    display: none;
+    
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+    size: 4px
+ }
+ #slides {
+    padding: 10px;
+    /* border: 3px solid #ccc; */
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+ }
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    color: #000000;
+    
+ }
+ #slides .slide_1 {
+    background: #ffffff;
+ }
+ #slides .slide_2 {
+    background: #ffffff;
+ }
+ #slides .slide_3 {
+    background: #ffffff;
+ }
+ #slides .slide_4 {
+    background: #ffffff;
+ }
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+
+.containerSlider {
+   margin-top: 300px;
+   width: 100%;
+   height: 600px;
+   position: relative;
+   top: 50%;
+   left: 40%;
+   transform: translate(-50%, -50%);
+}
+
+.items-container {
+   
+   display: inline-flex;
+   
+   pointer-events: none;
+  
+   top: 0;
+   left: 0;
+}
+
+.item {
+   
+   align-items: center;
+   height: 500px;
+   width: 500px;
+   border-radius: 5px;
+
+}
+
+.item-center{
+   padding-top: 200px
+}
+
+ #slide1:checked ~ #controls label:nth-child(2),
+ #slide2:checked ~ #controls label:nth-child(3),
+ #slide3:checked ~ #controls label:nth-child(4),
+ #slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://www.svgrepo.com/show/521479/arrow-next-small.svg) no-repeat;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #slide1:checked ~ #controls label:nth-last-child(2),
+ #slide2:checked ~ #controls label:nth-last-child(3),
+ #slide3:checked ~ #controls label:nth-last-child(4),
+ #slide4:checked ~ #controls label:nth-last-child(1) {
+    background: url(https://www.svgrepo.com/show/521479/arrow-next-small.svg) no-repeat;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #535d67;
+ }
+ @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
