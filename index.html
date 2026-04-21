@@ -90,7 +90,7 @@
                     </div>
                     <div class="uui-navbar02_dropdown-link-list">
                       <h4 class="uui-navbar02_heading">Hardware</h4>
-                      <a href="../../system/hardware/quins-mount.html" aria-current="page" class="uui-navbar02_dropdown-link w-inline-block w--current">
+                      <a href="./system/hardware/quins-mount.html" aria-current="page" class="uui-navbar02_dropdown-link w-inline-block w--current">
                         <div class="uui-navbar02_icon-wrapper">
                           <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                               <rect width="256" height="256" fill="none"></rect>
@@ -111,7 +111,7 @@
                           <div class="uui-text-size-small hide-mobile-landscape">Die perfekte Hilfe beim bestücken Ihrer Bauteile.</div>
                         </div>
                       </a>
-                      <a href="system/hardware/quins-line.html" class="uui-navbar02_dropdown-link w-inline-block">
+                      <a href="./system/hardware/quins-line.html" class="uui-navbar02_dropdown-link w-inline-block">
                         <div class="uui-navbar02_icon-wrapper">
                           <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                               <rect width="256" height="256" fill="none"></rect>
@@ -129,7 +129,7 @@
                           <div class="uui-text-size-small hide-mobile-landscape">Für die Linienfertigung mit variabler Bauteilhöhe.</div>
                         </div>
                       </a>
-                      <a href="system/hardware/quins-flex.html" class="uui-navbar02_dropdown-link w-inline-block">
+                      <a href="./system/hardware/quins-flex.html" class="uui-navbar02_dropdown-link w-inline-block">
                         <div class="uui-navbar02_icon-wrapper">
                           <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                               <rect width="256" height="256" fill="none"></rect>
@@ -147,7 +147,7 @@
                           <div class="uui-text-size-small hide-mobile-landscape">Variable Bauteilhöhe für THT</div>
                         </div>
                       </a>
-                      <a href="system/hardware/quins-ultimate.html" class="uui-navbar02_dropdown-link w-inline-block">
+                      <a href="./system/hardware/quins-ultimate.html" class="uui-navbar02_dropdown-link w-inline-block">
                         <div class="uui-navbar02_icon-wrapper">
                           <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                               <rect width="256" height="256" fill="none"></rect>
@@ -161,7 +161,7 @@
                           <div class="uui-text-size-small hide-mobile-landscape">Das mobile All-In-One System ganz nach Ihren Bedürfnissen.</div>
                         </div>
                       </a>
-                      <a href="system/hardware/quins-pro-hr.html" class="uui-navbar02_dropdown-link w-inline-block">
+                      <a href="./system/hardware/quins-pro-hr.html" class="uui-navbar02_dropdown-link w-inline-block">
                         <div class="uui-navbar02_icon-wrapper">
                           <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                               <rect width="256" height="256" fill="none"></rect>
@@ -177,7 +177,7 @@
                           <div class="uui-text-size-small hide-mobile-landscape">Hochauflösendes Prüfsystem mit dem Ihnen nichts entgeht.</div>
                         </div>
                       </a>
-                      <a href="system/hardware/quins-pro.html" class="uui-navbar02_dropdown-link w-inline-block">
+                      <a href="./system/hardware/quins-pro.html" class="uui-navbar02_dropdown-link w-inline-block">
                         <div class="uui-navbar02_icon-wrapper">
                           <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
                               <rect width="256" height="256" fill="none"></rect>
@@ -578,6 +578,78 @@
       </div>
     </div>
   </section>
+  <!-- Quins Machine Summary Buttons -->
+  <section>
+    <style>
+      .summary_container{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        gap: 30px;
+        align-self: center;
+        justify-content: center;
+      }
+
+      
+      .summary_container a{
+        
+        background-color: white;
+        max-width: 600px;
+        max-height: 500px;
+        
+        
+      }
+      .outer_shadow{
+        box-shadow: -0px -0px 15px #657D98;
+        border-radius: 1rem;
+        
+      }
+      .image_shadow{
+        border-color: #657D98;
+        box-shadow: 7px 7px 1px #657d98;
+        border-radius: 1rem;
+        transition: 0.5s;
+
+      }
+
+      .image_shadow:hover{
+        
+        box-shadow: none;
+        border-radius: 1em;
+        transition: 0.5s;
+        
+      }
+    </style>
+    <div className="uui-page-heading" style="text-align: center; padding: 50px;">
+      <h2 class="uui-heading-medium-2">Unsere Systeme im Überblick</h2>
+
+    </div>
+    <div  style="align-items: center;">
+      <div class="summary_container">
+        <a class="outer_shadow" href="./system/hardware/quins-ultimate.html">
+          
+          <img class="image_shadow" src="images/QuinsFlexPrevButton.png">
+        </a>
+        <a class="outer_shadow" href="./system/hardware/quins-mount.html">
+          <img class="image_shadow" src="images/QuinsMountPrevButton.png">
+        </a>
+        <a class="outer_shadow" href="./system/hardware/quins-pro.html">
+          <img class="image_shadow" src="images/QuinsProPrevButton.png">
+        </a>
+        <a class="outer_shadow" href="./system/hardware/quins-ultimate.html">
+          <img class="image_shadow" src="images/QuinsUltimatePrevButton.png">
+        </a>
+        <a class="outer_shadow" href="./system/hardware/quins-line.html">
+          <img class="image_shadow" src="images/QuinsLinePrevButton.png">
+        </a>
+        <a class="outer_shadow" href="./system/hardware/quins-pro-hr.html">
+          <img class="image_shadow" src="images/QuinsProHRPRevButton.png">
+        </a>
+
+      </div>
+    </div>
+    
+  </section>
   <section class="uui-section_layout27">
     <div class="uui-page-padding">
       <div class="uui-container-large">
@@ -666,7 +738,7 @@
               </div>
             </div>
           </div>
-          <a href="#" data-w-id="027974d4-cb5a-bc71-fe06-233bb4712891" class="uui-layout27_lightbox w-inline-block w-lightbox">
+          <a href="#" data-w-id="027974d4-cb5a-bc71-fe06-233bb4712891" class="uui-layout27_lightbox w-inline-block w-lightbox" style=" border: 10px solid transparent; border-radius: 10px;">
             <div class="lightbox_video-overlay-layer-2"><img src="images/play-icon.svg" loading="lazy" alt="Play video icon" class="uui-lightbox_play-icon-2"></div>
             <script type="application/json" class="w-json">{
   "items": [
@@ -687,104 +759,7 @@
       </div>
     </div>
   </section>
-  <section class="uui-section_layout84">
-    <div class="uui-page-padding">
-      <div class="uui-container-large">
-        <div class="uui-padding-vertical-xhuge">
-          <div class="uui-layout84_component">
-            <div class="uui-text-align-center">
-              <div class="uui-max-width-large-3">
-                <div class="uui-heading-subheading-2">Quins Flex Line</div>
-                <h2 class="uui-heading-medium-2">Darauf kann man sich verlassen.</h2>
-                <div class="uui-space-xsmall-2"></div>
-                <div class="uui-text-size-large-2">Unser neuestes System zum Anbau an eine Fertigungslinie. Prüfen Sie manuell per Wechselbild-Inspektion, per EMP, per MOI, oder mit dem neuen Automatischen Inspektions-Prozess AIP in Quins Easy Plus mit AIP. </div>
-              </div>
-            </div>
-            <div class="w-layout-grid uui-layout84_content-bottom">
-              <div id="w-node-dd248359-e433-585d-0751-b0b094a37da3-b3c87c19" class="w-layout-grid uui-layout84_left">
-                <div class="uui-layout84_item">
-                  <div class="uui-icon-featured-outline-large">
-                    <div class="uui-icon-1x1-xsmall-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <line x1="216" y1="128" x2="40" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <line x1="128" y1="96" x2="128" y2="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="96 48 128 16 160 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        <line x1="128" y1="160" x2="128" y2="240" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="160 208 128 240 96 208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                      </svg></div>
-                  </div>
-                  <div class="uui-space-small-3"></div>
-                  <h3 class="uui-heading-xxsmall-2">Flexibel</h3>
-                  <div class="uui-space-xxsmall-2"></div>
-                  <div class="uui-text-size-medium-2">Flexibel dort einsetzbar, wo Sie es benötigen. Jederzeit auf das Prüfobjekt anpassbar.</div>
-                </div>
-                <div class="uui-layout84_item">
-                  <div class="uui-icon-featured-outline-large">
-                    <div class="uui-icon-1x1-xsmall-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <line x1="144" y1="144" x2="120" y2="168" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <line x1="144" y1="144" x2="120" y2="168" fill="#231f20"></line>
-                        <line x1="112" y1="112" x2="88" y2="136" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <line x1="112" y1="112" x2="88" y2="136" fill="#231f20"></line>
-                        <line x1="64" y1="112" x2="144" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <line x1="58.06" y1="197.94" x2="24" y2="232" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <path d="M132,180l-29,29a24,24,0,0,1-33.94,0L47,186.91A24,24,0,0,1,47,153l29-29" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-                        <line x1="112" y1="64" x2="192" y2="144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <line x1="197.94" y1="58.06" x2="232" y2="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <path d="M180,132l29-29a24,24,0,0,0,0-33.94L186.91,47A24,24,0,0,0,153,47L124,76" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-                      </svg></div>
-                  </div>
-                  <div class="uui-space-small-3"></div>
-                  <h3 class="uui-heading-xxsmall-2">Verbunden</h3>
-                  <div class="uui-space-xxsmall-2"></div>
-                  <div class="uui-text-size-medium-2">Über LAN, oder WLAN sind Sie mit anderen Arbeitsplätzen und/oder einem Server verbunden.</div>
-                </div>
-              </div>
-              <div id="w-node-dd248359-e433-585d-0751-b0b094a37db6-b3c87c19" class="uui-layout84_image-wrapper"><img src="images/quins-flex-line.jpg" loading="lazy" srcset="images/quins-flex-line-p-500.jpg 500w, images/quins-flex-line.jpg 810w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 93vw, (max-width: 991px) 44vw, 36vw" alt="Quins Flex Line System" class="uui-layout84_image"></div>
-              <div id="w-node-dd248359-e433-585d-0751-b0b094a37db9-b3c87c19" class="w-layout-grid uui-layout84_right">
-                <div class="uui-layout84_item">
-                  <div class="uui-icon-featured-outline-large">
-                    <div class="uui-icon-1x1-xsmall-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <polyline points="216 104 215.99 40.01 152 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        <line x1="136" y1="120" x2="216" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <path d="M184,136v72a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h72" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-                      </svg></div>
-                  </div>
-                  <div class="uui-space-small-3"></div>
-                  <h3 class="uui-heading-xxsmall-2">Individuell</h3>
-                  <div class="uui-space-xxsmall-2"></div>
-                  <div class="uui-text-size-medium-2">Je nach Einsatzzweck, können Sie die passende Ausstattung wählen.</div>
-                </div>
-                <div class="uui-layout84_item">
-                  <div class="uui-icon-featured-outline-large">
-                    <div class="uui-icon-1x1-xsmall-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
-                        <circle cx="92" cy="108" r="12"></circle>
-                        <circle cx="164" cy="108" r="12"></circle>
-                        <path d="M168,152c-8.3,14.35-22.23,24-40,24s-31.7-9.65-40-24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-                      </svg></div>
-                  </div>
-                  <div class="uui-space-small-3"></div>
-                  <h3 class="uui-heading-xxsmall-2">Einfach</h3>
-                  <div class="uui-space-xxsmall-2"></div>
-                  <div class="uui-text-size-medium-2">Nutzen Sie die Einfachheit der Quins Lösungen für Ihren Erfolg.</div>
-                </div>
-              </div>
-            </div>
-            <div class="uui-button-row-3 button-row-center is-reverse-mobile-landscape">
-              <div class="uui-button-wrapper-3 max-width-full-mobile-landscape">
-                <a href="system/hardware/quins-line.html" class="uui-button-3 w-inline-block">
-                  <div>Zum Quins Line</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
   <section class="uui-section_faq05">
     <div class="uui-page-padding">
       <div class="uui-container-large">
