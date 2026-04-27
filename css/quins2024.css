@@ -2130,13 +2130,25 @@
 }
 
 .slide-104 {
-  background-image: url('../images/HomepageSlides/HomeSlide2.png');
+  background-image: url('../images/HomepageSlides/HomeSlide22.png');
   background-position: 50%;
   background-size: cover;
 }
 
 .slide-105 {
   background-image: url('../images/HomepageSlides/HomeSlide7.png');
+  background-position: 50%;
+  background-size: cover;
+}
+
+.slide-106 {
+  background-image: url('../images/HomepageSlides/HomeSlide8.png');
+  background-position: 50%;
+  background-size: cover;
+}
+
+.slide-107 {
+  background-image: url('../images/HomepageSlides/HomeSlide9.png');
   background-position: 50%;
   background-size: cover;
 }

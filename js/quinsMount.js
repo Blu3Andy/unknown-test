@@ -61,7 +61,7 @@ let mixer;
 let clips;
 
 
-const loader = new GLTFLoader().setPath('/models/');
+const loader = new GLTFLoader().setPath('../../models/');
 loader.load('QuinsProductModel.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
