@@ -647,6 +647,17 @@
 
   <section>
     <style>
+      @media only screen and (max-width: 1026px) 
+      {
+          #summary_systems_desktop {
+              grid-template-columns: auto auto;
+          }
+      }
+
+      .summary_systems_desktoop{
+        padding-right: none;
+      }
+
       .summary_next_container{
         display: grid;
         grid-template-columns: auto auto auto;
@@ -656,11 +667,10 @@
         justify-content: center;
       }
 
-      .summary_next_container a{
-        background-color: white;
+      .summary_next_container div{
         max-width: 500px;
         min-height: auto;
-        max-height: 600px; 
+        max-height: auto; 
       }
       .outer_shadow_next{
         box-shadow: 0px 0px 10px #657D98;
@@ -678,10 +688,8 @@
         transition: 0.5s;
       }
 
-      
-
       a.nostyle:link{
-        text-decoration: inherit;
+        text-decoration: none;
       }
 
       
@@ -689,47 +697,88 @@
     <div className="uui-page-heading" style="text-align: center; padding: 50px;">
       <h2 class="uui-heading-medium-2">Unsere Systeme im Überblick</h2>
     </div>
-    <div  style="align-items: center;">
+    <div class="summary_systems_desktop" style="align-items: center;">
       <div class="summary_next_container">
         
-        <a class="outer_shadow_next" href="./system/hardware/quins-pro.html">
+        <div class="outer_shadow_next" href="./system/hardware/quins-pro.html">
           <img class="image_shadow_next" src="images/QuinsProPrevButton.png">
           <div class="uui-text-size-xlarge" style="text-align: center; text-decoration: inherit; cursor: auto; color:black;">
-            <p style="text-decoration: none;">Die beste Technik um ein DIN-A3 Format bei hoher Auflösung brilliant abzubilden. <br/>
-            Die beste Technik um ein DIN-A3 Format bei hoher Auflösung brilliant abzubilden.</p>
+            <p style="text-decoration: none;">Die beste Technik <br/> und klassische Inspektion für alles <br/> auch Conformal Coating mit UV</p>
+          </div>
+          <div style="text-align: center; padding: 10px; margin-bottom: 1rem;">
+            <button class=" mobile-landscape" style="background-color: white;">
+              <a href="./system/hardware/quins-pro.html" class="uui-button is-button-large">
+                <div>zum Quins Pro</div>
+              </a>
+            </button>
           </div>
           
-        </a>
-        <a class="outer_shadow_next" href="./system/hardware/quins-mount.html">
+        </div>
+        <div class="outer_shadow_next" href="./system/hardware/quins-mount.html">
           <img class="image_shadow_next" src="images/QuinsMountPrevButton.png">
           <div class="uui-text-size-xlarge" style="text-decoration: inherit; cursor: auto; color:black;">
-            <p style="text-align: center;text-decoration: none;">Die beste Technik um ein DIN-A3 Format bei hoher Auflösung brilliant abzubilden.</p>
+            <p style="text-align: center;text-decoration: none;">Bestücken Sie THT-Bauteile fehlerfrei <br/> unter optimierter optischer Anleitung <br/> und automatischer Endkontrolle.</p>
           </div>
-        </a>
-        <a class="outer_shadow_next" href="./system/hardware/quins-pro-hr.html">
+          <div style="text-align: center; padding: 10px; margin-bottom: 1rem;">
+            <button class=" mobile-landscape" style="background-color: white;">
+              <a href="./system/hardware/quins-mount.html" class="uui-button is-button-large">
+                <div>zum Quins Mount</div>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="outer_shadow_next" href="./system/hardware/quins-pro-hr.html">
           <img class="image_shadow_next" src="images/QuinsProHRPRevButton.png">
           <div class="uui-text-size-xlarge" style="text-decoration: inherit; cursor: auto; color:black;">
             <p style="text-align: center;text-decoration: none;">Die beste Technik um ein DIN-A3 Format bei hoher Auflösung brilliant abzubilden.</p>
           </div>
-        </a>
-        <a class="outer_shadow_next" href="./system/hardware/quins-ultimate.html">
+          <div style="text-align: center; padding: 10px; margin-bottom: 1rem;">
+            <button class=" mobile-landscape" style="background-color: white;">
+              <a href="./system/hardware/quins-pro-hr.html" class="uui-button is-button-large">
+                <div>zum Quins Pro HR</div>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="outer_shadow_next" href="./system/hardware/quins-ultimate.html">
           <img class="image_shadow_next" src="images/QuinsUltimatePrevButton.png">
           <div class="uui-text-size-xlarge" style="text-decoration: inherit; cursor: auto; color:black;">
-            <p style="text-align: center;text-decoration: none;">Die beste Technik um ein DIN-A3 Format bei hoher Auflösung brilliant abzubilden.</p>
+            <p style="text-align: center;text-decoration: none;">Alles in mobiler Form: <br/> Prüfen Sie dort, wo Sie es <br/> brauchen und möchten <br/> völlig autark, oder auch im Netzwerk</p>
           </div>
-        </a>
-        <a class="outer_shadow_next" href="./system/hardware/quins-flex.html">   
+          <div style="text-align: center; padding: 10px; margin-bottom: 1rem;">
+            <button class=" mobile-landscape" style="background-color: white;">
+              <a href="./system/hardware/quins-ultimate.html" class="uui-button is-button-large">
+                <div>zum Quins Ultimate</div>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="outer_shadow_next" href="./system/hardware/quins-flex.html">  
           <img class="image_shadow_next" src="images/QuinsFlexPrevButton.png">
           <div class="uui-text-size-xlarge" style="text-decoration: inherit; cursor: auto; color:black;">
             <p style="text-align: center;text-decoration: none;">Die beste Technik um ein DIN-A3 Format bei hoher Auflösung brilliant abzubilden.</p>
           </div>
-        </a>
-        <a class="outer_shadow_next" href="./system/hardware/quins-line.html">
+          <div style="text-align: center; padding: 10px; margin-bottom: 1rem;">
+            <button class=" mobile-landscape" style="background-color: white;">
+              <a href="./system/hardware/quins-flex.html" class="uui-button is-button-large">
+                <div>zum Quins Flex</div>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="outer_shadow_next" href="./system/hardware/quins-line.html">
           <img class="image_shadow_next" src="images/QuinsLinePrevButton.png">
           <div class="uui-text-size-xlarge" style="text-decoration: inherit; cursor: auto; color:black;">
-            <p style="text-align: center;text-decoration: none;">Die beste Technik um ein DIN-A3 Format bei hoher Auflösung brilliant abzubilden.</p>
+            <p style="text-align: center;text-decoration: none;">Erstmuster- und Stichprobenprüfung <br/> zum Anbau an ihre Fertigungslinie. <br/> Als THT/SMD Version verfügbar</p>
           </div>
-        </a>
+          <div style="text-align: center; padding: 10px; margin-bottom: 1rem;">
+            <button class=" mobile-landscape" style="background-color: white;">
+              <a href="./system/hardware/quins-line.html" class="uui-button is-button-large">
+                <div>zum Quins Line</div>
+              </a>
+            </button>
+          </div>
+        </div>
         
 
       </div>
