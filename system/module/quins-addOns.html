@@ -581,7 +581,7 @@
             </div>
             
             <div class="window3">
-              <h2 class="uui-heading-large" id="partName">Zusatzteile</h2>
+              <h2 class="uui-heading-large" id="partName">Klotz Schublade</h2>
                 <div class="optik-slider-wrapper">
                   <button class="slider-pfeil" id="pfeilLinks" onclick="verschiebeSlider(-1)">&#8249;</button>
 
@@ -630,8 +630,10 @@
       const btnRechts = document.getElementById('pfeilRechts');
       const partName = document.getElementById('partName');
 
+      showModel1();
       let offset = 0;
-
+      
+      
       function schrittBreite() {
         const btn = track.querySelector('.optik-btn');
         if (!btn) return 116;
@@ -665,6 +667,7 @@
         'optik-6': { fn: showModel7, name: 'Mitten Unterstützung' },
       };
 
+      
       function optikWaehlen(btn, optikId) {
         document.querySelectorAll('.optik-btn').forEach(b => b.classList.remove('aktiv'));
         btn.classList.add('aktiv');
