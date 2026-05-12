@@ -103,7 +103,7 @@ const clock = new THREE.Clock();
 function renderObject(object, position = new THREE.Vector3(0, 0, 0))
 {
  
-  const path = `./../models/addOns/${object}`;
+  const path = `../../models/addOns/${object}`;
   loader = new GLTFLoader().setPath('/models/');
   loader.load(path, (gltf) => {
     console.log('loading model');
