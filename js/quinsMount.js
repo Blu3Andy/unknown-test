@@ -154,7 +154,6 @@ function playAnimation(action) {
     current.crossFadeTo(action, 2);
   }
   
-  console.log('Previous:', current, 'New:', action);
   current = action;
 }
 

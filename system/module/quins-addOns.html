@@ -17,6 +17,14 @@
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="../../images/webclip.jpg" rel="apple-touch-icon">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 <body>
   <div data-w-id="421732b6-d4ea-4a13-dc0b-53c1d8083fcf" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="uui-navbar02_component w-nav">
@@ -451,248 +459,242 @@
     </div>
   </div>
   <header class="uui-section_heroheader19">
+    <style>
+      .kleinTeilContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        min-height: 700px;
+        gap: 10px;
+      }
+
+      .window1{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        
+        background-color: blue;
+        
+      }
+
+      /* .window2{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        background-color: red;
+      } */
+
+      .window3{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 3;
+
+        
+        max-height: 250px;
+      }
+
+      .optik-slider-wrapper {
+        position: relative;
+        height: 250px;
+        display: flex;
+        align-items: center;
+      }
+      .slider-pfeil {
+        flex-shrink: 0;
+        width: 32px;
+        height: 100%;
+        
+        color: #000;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        
+        user-select: none;
+      }
+      
+      .slider-pfeil:disabled { opacity: 0.25; cursor: default; }
+
+      .optik-viewport {
+        flex: 1;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .optik-track {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 16px;
+        transition: transform 0.35s ease;
+        will-change: transform;
+      }
+      .optik-btn {
+        flex-shrink: 0;
+        width: 200px;
+        height: 200px;
+        padding: 0;
+        border: 3px solid transparent;
+        border-radius: 8px;
+        cursor: pointer;
+        overflow: hidden;
+        background: none;
+        transition: border-color 0.2s, transform 0.15s;
+      }
+      .optik-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        pointer-events: none;
+      }
+      .optik-btn:hover {
+        border-color: #94a6bb;
+        transform: scale(1.04);
+      }
+      .optik-btn.aktiv {
+        border-color: #657D98;
+        box-shadow: 0 0 0 1px #657D98;
+      }
+    </style>
     <div class="uui-page-padding-9">
       <div class="uui-container-large-8">
         <div class="uui-padding-vertical-xhuge-8">
-          <div class="uui-heroheader19_component">
-            <div class="uui-badge-2 is-primary">
-              <div>Quins View</div>
+          <h1 class="uui-heading-xlarge">Zusatzteile</h1>
+          <div class="kleinTeilContainer">
+            <div class="window1">
+              <div class = "model" id="threejs-container" style=" max-width: 800px; margin-top: 20px auto 0;">
+                <div id="progress-container">
+                  <div id="progress">Model lädt...</div>
+                </div>
+                <script type="module" src="../../js/quinsAddOns.js" alt="interagier mit mir!"></script>
+              </div>
             </div>
-            <div class="uui-space-small-7"></div>
-            <div class="uui-text-align-center-6">
-              <div class="uui-max-width-xlarge-4">
-                <h1 class="uui-heading-xlarge-5">Traceability par excellence.</h1>
-                <div class="uui-space-small-7"></div>
-                <div class="uui-text-size-xlarge-6">Sichern Sie nachweislich Ihre Qualität. Alle Informationen über die Prüfergebnisse mit einfachem Zugriff auf alle Archivdaten und Bilder.</div>
-                <div class="uui-max-width-large-6 align-center"></div>
-                <div class="uui-space-large-5"></div>
-                <div class="uui-button-row is-center">
-                  <div class="uui-button-wrapper-2 max-width-full-mobile-landscape">
-                    <a href="#" class="uui-button-secondary-gray-2 w-inline-block">
-                      <div>Demotermin vereinbaren</div>
-                    </a>
+            
+            <div class="window3">
+              <h2 class="uui-heading-large" id="partName">Zusatzteile</h2>
+                <div class="optik-slider-wrapper">
+                  <button class="slider-pfeil" id="pfeilLinks" onclick="verschiebeSlider(-1)">&#8249;</button>
+
+                  <div class="optik-viewport" id="optikViewport">
+                    <div class="optik-track" id="optikTrack">
+                      <!-- Beliebig viele Buttons hinzufügen oder entfernen -->
+                      <button class="optik-btn aktiv" title="Optik A">
+                        <img src="/images/AddOns/KlotzSchublade.png" alt="Optik A">
+                      </button>
+                      <button class="optik-btn" title="Optik B">
+                        <img src="/images/AddOns/MagnetHalterL.png" alt="Optik B">
+                      </button>
+                      <button class="optik-btn" title="Optik C">
+                        <img src="/images/AddOns/MagnetHalterI.png" alt="Optik C">
+                      </button>
+                      <button class="optik-btn" title="Optik D">
+                        <img src="/images/AddOns/THT.png" alt="Optik D">
+                      </button>
+                      <button class="optik-btn" title="Optik E">
+                        <img src="/images/AddOns/THTThin.png" alt="Optik E">
+                      </button>
+                      <button class="optik-btn" title="Optik F">
+                        <img src="/images/AddOns/THTAngle.png" alt="Optik F">
+                      </button>
+                      <button class="optik-btn" title="Optik G">
+                        <img src="/images/AddOns/MittenUnterstützung.png" alt="Optik G">
+                      </button>
+                      
+                    </div>
                   </div>
-                  <div class="uui-button-wrapper-2 max-width-full-mobile-landscape">
-                    <a href="#" class="uui-button-2 w-inline-block">
-                      <div>System konfigurieren</div>
-                    </a>
-                  </div>
+
+                  <button class="slider-pfeil" id="pfeilRechts" onclick="verschiebeSlider(1)">&#8250;</button>
                 </div>
               </div>
             </div>
-            <div class="uui-heroheader19_image-wrapper"><img src="../../images/quins-view_1.jpg" loading="lazy" srcset="../../images/quins-view_1-p-500.jpg 500w, ../../images/quins-view_1-p-800.jpg 800w, ../../images/quins-view_1-p-1080.jpg 1080w, ../../images/quins-view_1-p-1600.jpg 1600w, ../../images/quins-view_1.jpg 2160w" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 92vw, 767.998046875px" alt="" class="uui-heroheader19_image shadow-xlarge"></div>
           </div>
         </div>
       </div>
     </div>
+    <script type="module">
+      import { showModel1, showModel2, showModel3, showModel4, showModel5, showModel6, showModel7 } from '/js/quinsAddOns.js';
+
+      const track = document.getElementById('optikTrack');
+      const viewport = document.getElementById('optikViewport');
+      const btnLinks = document.getElementById('pfeilLinks');
+      const btnRechts = document.getElementById('pfeilRechts');
+      const partName = document.getElementById('partName');
+
+      let offset = 0;
+
+      function schrittBreite() {
+        const btn = track.querySelector('.optik-btn');
+        if (!btn) return 116;
+        return btn.offsetWidth + 12;
+      }
+
+      function maxOffset() {
+        return Math.max(0, track.scrollWidth - viewport.offsetWidth);
+      }
+
+      function verschiebeSlider(richtung) {
+        const schritt = schrittBreite() * 3;
+        offset = Math.min(maxOffset(), Math.max(0, offset + richtung * schritt));
+        track.style.transform = `translateX(-${offset}px)`;
+        pfeileAktualisieren();
+      }
+
+      function pfeileAktualisieren() {
+        btnLinks.disabled = offset <= 0;
+        btnRechts.disabled = offset >= maxOffset();
+      }
+
+      // Map optik IDs to functions and names
+      const optikActions = {
+        'optik-0': { fn: showModel1, name: 'Klotz Schublade' },
+        'optik-1': { fn: showModel2, name: 'Magnet Halter L' },
+        'optik-2': { fn: showModel3, name: 'Magnet Halter I' },
+        'optik-3': { fn: showModel4, name: 'THT' },
+        'optik-4': { fn: showModel5, name: 'THT Thin' },
+        'optik-5': { fn: showModel6, name: 'THT Angle' },
+        'optik-6': { fn: showModel7, name: 'Mitten Unterstützung' },
+      };
+
+      function optikWaehlen(btn, optikId) {
+        document.querySelectorAll('.optik-btn').forEach(b => b.classList.remove('aktiv'));
+        btn.classList.add('aktiv');
+
+        const action = optikActions[optikId];
+        if (action) {
+          action.fn();
+          partName.textContent = action.name;
+        } else {
+          console.warn('Keine Aktion für:', optikId);
+        }
+      }
+
+      // Attach click handlers via JS instead of inline onclick
+      track.querySelectorAll('.optik-btn').forEach((btn, i) => {
+        const optikId = `optik-${i}`;
+        btn.addEventListener('click', () => optikWaehlen(btn, optikId));
+      });
+
+      // Expose slider functions globally for the inline onclick attributes on arrow buttons
+      window.verschiebeSlider = verschiebeSlider;
+
+      window.addEventListener('load', pfeileAktualisieren);
+      window.addEventListener('resize', () => {
+        offset = 0;
+        track.style.transform = '';
+        pfeileAktualisieren();
+      });
+    </script>
   </header>
-  <section class="uui-section_layout49">
-    <div class="uui-page-padding-9">
-      <div class="uui-container-large-8">
-        <div class="uui-padding-vertical-xhuge-8">
-          <div class="w-layout-grid uui-layout49_component">
-            <div class="uui-layout49_image-wrapper"><img src="../../images/quins-view_1.jpg" loading="lazy" width="1440" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 73vw, 640px" alt="" srcset="../../images/quins-view_1-p-500.jpg 500w, ../../images/quins-view_1-p-800.jpg 800w, ../../images/quins-view_1-p-1080.jpg 1080w, ../../images/quins-view_1-p-1600.jpg 1600w, ../../images/quins-view_1.jpg 2160w" class="uui-layout49_image shadow-xlarge"></div>
-            <div id="w-node-_85191885-8179-d5f0-7951-55d3122d7ca9-b72a697e" class="uui-layout49_content">
-              <div class="uui-heading-subheading-6">Nachweis, Dokumentation und Traceability</div>
-              <h2 class="uui-heading-medium-6">Nachweislich beste Qualität liefern.</h2>
-              <div class="uui-space-xsmall-6"></div>
-              <div class="uui-text-size-large-6">Alle Informationen über Ihre Prüf-/Reparatur-Ergebnisse an einem Ort ganz automatisch gesammelt. So liefern Sie nachweislich immer beste Qualität und haben einfachen Zugriff auf alle Ihre Archivdaten, Bilder und Prüfergebnisse.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="uui-section_layout32">
-    <div class="uui-page-padding-9">
-      <div class="uui-container-large-8">
-        <div class="uui-padding-vertical-xhuge-8">
-          <div class="w-layout-grid uui-layout32_component">
-            <div class="uui-layout32_content-left">
-              <div class="uui-heading-subheading-6">Einsatzbereiche</div>
-              <h2 class="uui-heading-medium-6">Einfach und ohne Programmieraufwand.</h2>
-              <div class="uui-space-small"></div>
-              <div class="uui-text-size-large-6">Egal, was und wann Sie prüfen: Jeder kann, ohne Schulungsaufwand Quins easy bedienen. Mit der automatischen Barcode-Erkennung wird die Nachverfolgbarkeit noch einfacher. Easy. </div>
-            </div>
-            <div class="uui-layout32_content-right">
-              <div data-w-id="71673843-8089-7c4f-f369-db667e26e76b" class="uui-layout32_timeline-wrapper">
-                <div class="uui-layout32_progress-bar-wrapper">
-                  <div class="uui-layout32_progress-bar"></div>
-                </div>
-                <div data-w-id="71673843-8089-7c4f-f369-db667e26e76e" class="w-layout-grid uui-layout32_timeline-step">
-                  <div class="uui-layout32_timeline-left">
-                    <div class="uui-layout32_timeline-icon-wrapper">
-                      <div class="uui-icon-featured-outline-large">
-                        <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <rect x="32" y="56" width="192" height="144" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
-                            <line x1="96" y1="56" x2="96" y2="200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="160" y1="56" x2="160" y2="200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="32" y1="104" x2="224" y2="104" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="32" y1="152" x2="224" y2="152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="w-node-_71673843-8089-7c4f-f369-db667e26e773-7e26e75d" class="uui-layout32_timeline-right">
-                    <div class="uui-layout32_text-wrapper">
-                      <h3 class="uui-heading-xxsmall-5">Serien-Inspektion</h3>
-                      <div class="uui-space-xsmall"></div>
-                    </div>
-                  </div>
-                </div>
-                <div data-w-id="71673843-8089-7c4f-f369-db667e26e778" class="w-layout-grid uui-layout32_timeline-step">
-                  <div class="uui-layout32_timeline-left">
-                    <div class="uui-layout32_timeline-icon-wrapper">
-                      <div class="uui-icon-featured-outline-large">
-                        <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <rect x="32" y="48" width="192" height="160" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
-                            <line x1="80" y1="96" x2="176" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="80" y1="128" x2="176" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="80" y1="160" x2="176" y2="160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="w-node-_71673843-8089-7c4f-f369-db667e26e77d-7e26e75d" class="uui-layout32_timeline-right">
-                    <div class="uui-layout32_text-wrapper">
-                      <h3 class="uui-heading-xxsmall-5">Erstmusterprüfung</h3>
-                    </div>
-                    <div class="uui-space-xsmall"></div>
-                  </div>
-                </div>
-                <div data-w-id="71673843-8089-7c4f-f369-db667e26e782" class="w-layout-grid uui-layout32_timeline-step">
-                  <div class="uui-layout32_timeline-left">
-                    <div class="uui-layout32_timeline-icon-wrapper">
-                      <div class="uui-icon-featured-outline-large">
-                        <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="40" y1="128" x2="112" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="40" y1="192" x2="128" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <circle cx="184" cy="144" r="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
-                            <line x1="206.63" y1="166.63" x2="232" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="w-node-_71673843-8089-7c4f-f369-db667e26e787-7e26e75d" class="uui-layout32_timeline-right">
-                    <div class="uui-layout32_text-wrapper">
-                      <h3 class="uui-heading-xxsmall-5">Stichprobenkontrolle</h3>
-                    </div>
-                    <div class="uui-space-xsmall"></div>
-                  </div>
-                </div>
-                <div data-w-id="71673843-8089-7c4f-f369-db667e26e78c" class="w-layout-grid uui-layout32_timeline-step">
-                  <div class="uui-layout32_timeline-left">
-                    <div class="uui-layout32_timeline-icon-wrapper">
-                      <div class="uui-icon-featured-outline-large">
-                        <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <polyline points="128 232 128 160 72 104 72 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <polyline points="160 200 128 232 96 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <polyline points="184 40 184 104 128 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="w-node-_71673843-8089-7c4f-f369-db667e26e791-7e26e75d" class="uui-layout32_timeline-right">
-                    <div class="uui-layout32_text-wrapper">
-                      <h3 class="uui-heading-xxsmall-5">Rüstkontrolle</h3>
-                    </div>
-                    <div class="uui-space-xsmall"></div>
-                  </div>
-                </div>
-                <div data-w-id="71673843-8089-7c4f-f369-db667e26e796" class="w-layout-grid uui-layout32_timeline-step">
-                  <div class="uui-layout32_timeline-left">
-                    <div class="uui-layout32_timeline-icon-wrapper">
-                      <div class="uui-icon-featured-outline-large">
-                        <div class="uui-icon-1x1-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="168" y1="80" x2="240" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="168" y1="176" x2="240" y2="176" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="168" y1="112" x2="240" y2="112" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="168" y1="144" x2="240" y2="144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <path d="M88,200a72,72,0,0,1-72-72.55C16.3,87.75,49.2,56,88.9,56H128a8,8,0,0,1,8,8V192a8,8,0,0,1-8,8Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="w-node-_71673843-8089-7c4f-f369-db667e26e79b-7e26e75d" class="uui-layout32_timeline-right">
-                    <div class="uui-layout32_text-wrapper">
-                      <h3 class="uui-heading-xxsmall-5">UV-Inspektion</h3>
-                    </div>
-                    <div class="uui-space-xsmall"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="uui-section_layout12">
-    <div class="uui-page-padding">
-      <div class="uui-container-large">
-        <div class="uui-padding-vertical-xhuge">
-          <div class="w-layout-grid uui-layout12_component">
-            <div class="uui-layout12_content">
-              <div class="uui-heading-subheading">Wechselbildinspektion</div>
-              <h2 class="uui-heading-medium">Was ist eine Wechselbildinspektion?</h2>
-              <div class="uui-space-xsmall"></div>
-              <div class="uui-text-size-large">Innerhalb von 20 Sekunden können Sie einfach prüfen. Dazu wird das Referenzbild automatisch deckungsgleich mit dem Prüfling zentriert und im Wechsel angezeigt. So können schnell und unkompliziert Fehler gefunden werden.</div>
-              <div class="w-layout-grid uui-layout12_item-list">
-                <div class="uui-layout12_text-wrapper">
-                  <div class="uui-layout12_number">20 sek</div>
-                  <div class="uui-layout12_number-text">Schnelle Prüfzeit</div>
-                </div>
-                <div class="uui-layout12_text-wrapper">
-                  <div class="uui-layout12_number">150%</div>
-                  <div class="uui-layout12_number-text">Mehr Effizienz</div>
-                </div>
-              </div>
-              <div class="uui-button-row is-reverse-mobile-landscape">
-                <div class="uui-button-wrapper max-width-full-mobile-landscape">
-                  <a href="../../quins/demotermin-buchen.html" class="uui-button-secondary-gray w-inline-block">
-                    <div>Demotermin vereinbaren</div>
-                  </a>
-                </div>
-                <div class="uui-button-wrapper max-width-full-mobile-landscape">
-                  <a href="../../system/software/quins-easy.html" class="uui-button w-inline-block">
-                    <div>Mehr zu Quins Easy</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="uui-layout12_image-wrapper"><img src="../../images/wechselbild_demo_2.gif" loading="lazy" alt="" class="uui-layout12_image"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="uui-section_layout02">
-    <div class="uui-page-padding-9">
-      <div class="uui-container-large-8">
-        <div class="uui-padding-vertical-xhuge-8">
-          <div class="w-layout-grid uui-layout02_component">
-            <div class="uui-layout02_content">
-              <div class="uui-badge-2 is-primary">
-                <div>Software</div>
-              </div>
-              <div class="uui-space-xsmall-6"></div>
-              <h2 class="uui-heading-medium-6">Erweiterungen nach Maß.</h2>
-              <div class="uui-space-xsmall-6"></div>
-              <div class="uui-text-size-large-6">Immer die perfekte Lösung für Ihren Einsatzzweck. Erweitern Sie Quins Easy und Easy+ einfach mit dem Modulen, die Sie benötigen. Optische Inspektion und Erstmusterprüfung gepaart mit Nachverfolgung, Reparatur, Statistik und Datenkontrolle. Easy.</div>
-              <div class="uui-space-medium-3"></div>
-            </div>
-            <div class="uui-layout02_image-wrapper"><img src="../../images/quins-easy.jpg" loading="lazy" id="w-node-e1fdf911-26dc-9e26-aa9a-5f1b28882bbb-28882baa" alt="" class="uui-layout02_image"><img src="../../images/quins-view.jpg" loading="lazy" alt="" class="uui-layout02_image"><img src="../../images/quins-repair.jpg" loading="lazy" alt="" class="uui-layout02_image"><img src="../../images/quins-statistics.jpg" loading="lazy" alt="" class="uui-layout02_image"><img src="../../images/quins-tools.jpg" loading="lazy" alt="" class="uui-layout02_image"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="uui-section_cta02">
     <div class="uui-page-padding">
       <div class="uui-container-large">
@@ -757,6 +759,28 @@
       </div>
     </div>
   </section>
+  <section class="uui-section_layout02">
+    <div class="uui-page-padding-9">
+      <div class="uui-container-large-8">
+        <div class="uui-padding-vertical-xhuge-8">
+          <div class="w-layout-grid uui-layout02_component">
+            <div class="uui-layout02_content">
+              <div class="uui-badge-2 is-primary">
+                <div>Software</div>
+              </div>
+              <div class="uui-space-xsmall-6"></div>
+              <h2 class="uui-heading-medium-6">Erweiterungen nach Maß.</h2>
+              <div class="uui-space-xsmall-6"></div>
+              <div class="uui-text-size-large-6">Immer die perfekte Lösung für Ihren Einsatzzweck. Erweitern Sie Quins Easy und Easy+ einfach mit dem Modulen, die Sie benötigen. Optische Inspektion und Erstmusterprüfung gepaart mit Nachverfolgung, Reparatur, Statistik und Datenkontrolle. Easy.</div>
+              <div class="uui-space-medium-3"></div>
+            </div>
+            <div class="uui-layout02_image-wrapper"><img src="../../images/quins-easy.jpg" loading="lazy" id="w-node-e1fdf911-26dc-9e26-aa9a-5f1b28882bbb-28882baa" alt="" class="uui-layout02_image"><img src="../../images/quins-view.jpg" loading="lazy" alt="" class="uui-layout02_image"><img src="../../images/quins-repair.jpg" loading="lazy" alt="" class="uui-layout02_image"><img src="../../images/quins-statistics.jpg" loading="lazy" alt="" class="uui-layout02_image"><img src="../../images/quins-tools.jpg" loading="lazy" alt="" class="uui-layout02_image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <footer class="uui-footer01_component">
     <div class="uui-page-padding-3">
       <div class="uui-container-large-3">
