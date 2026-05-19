@@ -9,7 +9,7 @@ import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUnifo
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-renderer.setSize(160*8, 90*8);
+renderer.setSize(160*5.5, 90*5.5);
 renderer.setClearColor(0xf9fafb, 1);
 renderer.setPixelRatio(window.devicePixelRatio);
 

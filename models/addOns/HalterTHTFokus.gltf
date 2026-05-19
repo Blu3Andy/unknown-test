@@ -57,14 +57,14 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":315,
+			"count":703,
 			"max":[
-				12.500007629394531,
+				13.09123420715332,
 				53.881988525390625,
 				9.911775588989258
 			],
 			"min":[
-				-12.500001907348633,
+				-27.765422821044922,
 				-0.11802864074707031,
 				-15.088239669799805
 			],
@@ -73,39 +73,39 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":315,
+			"count":703,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5123,
-			"count":1152,
+			"count":2190,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":3780,
+			"byteLength":8436,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3780,
-			"byteOffset":3780,
+			"byteLength":8436,
+			"byteOffset":8436,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2304,
-			"byteOffset":7560,
+			"byteLength":4380,
+			"byteOffset":16872,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":9864,
+			"byteLength":21252,
 			"uri":"HalterTHTFokus.bin"
 		}
 	]

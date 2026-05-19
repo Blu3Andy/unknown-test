@@ -473,8 +473,10 @@
         grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 3;
+
+        margin-inline: auto;
         
-        background-color: blue;
+        /* background-color: blue; */
         
       }
 
@@ -583,7 +585,7 @@
             <div class="window3">
               <h2 class="uui-heading-large" id="partName">Klotz Schublade</h2>
                 <div class="optik-slider-wrapper">
-                  <button class="slider-pfeil" id="pfeilLinks" onclick="verschiebeSlider(-1)">&#8249;</button>
+                  <!-- <button class="slider-pfeil" id="pfeilLinks" onclick="verschiebeSlider(-1)">&#8249;</button> -->
 
                   <div class="optik-viewport" id="optikViewport">
                     <div class="optik-track" id="optikTrack">
@@ -592,16 +594,10 @@
                         <img src="/images/AddOns/KlotzSchublade.png" alt="Optik A">
                       </button>
                       <button class="optik-btn" title="Optik B">
-                        <img src="/images/AddOns/MagnetHalterL.png" alt="Optik B">
-                      </button>
-                      <button class="optik-btn" title="Optik C">
-                        <img src="/images/AddOns/MagnetHalterI.png" alt="Optik C">
+                        <img src="/images/AddOns/MagnetHalterSet.png" alt="Optik B">
                       </button>
                       <button class="optik-btn" title="Optik D">
-                        <img src="/images/AddOns/THT.png" alt="Optik D">
-                      </button>
-                      <button class="optik-btn" title="Optik E">
-                        <img src="/images/AddOns/THTThin.png" alt="Optik E">
+                        <img src="/images/AddOns/THTSet.png" alt="Optik D">
                       </button>
                       <button class="optik-btn" title="Optik F">
                         <img src="/images/AddOns/THTAngle.png" alt="Optik F">
@@ -613,7 +609,7 @@
                     </div>
                   </div>
 
-                  <button class="slider-pfeil" id="pfeilRechts" onclick="verschiebeSlider(1)">&#8250;</button>
+                  <!-- <button class="slider-pfeil" id="pfeilRechts" onclick="verschiebeSlider(1)">&#8250;</button> -->
                 </div>
               </div>
             </div>
@@ -659,12 +655,10 @@
       // Map optik IDs to functions and names
       const optikActions = {
         'optik-0': { fn: showModel1, name: 'Klotz Schublade' },
-        'optik-1': { fn: showModel2, name: 'Magnet Halter L' },
-        'optik-2': { fn: showModel3, name: 'Magnet Halter I' },
-        'optik-3': { fn: showModel4, name: 'THT' },
-        'optik-4': { fn: showModel5, name: 'THT Thin' },
-        'optik-5': { fn: showModel6, name: 'THT Angle' },
-        'optik-6': { fn: showModel7, name: 'Mitten Unterstützung' },
+        'optik-1': { fn: showModel2, name: 'Magnet Halter Set' },
+        'optik-2': { fn: showModel4, name: 'THT Set' },
+        'optik-3': { fn: showModel6, name: 'THT Angle' },
+        'optik-4': { fn: showModel7, name: 'Mitten Unterstützung' },
       };
 
       
