@@ -422,6 +422,7 @@
 			"bufferView":0,
 			"componentType":5126,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"count":217,
 			"max":[
 				1.4810941219329834,
@@ -444,6 +445,18 @@
 				0.010370731353759766,
 				-10.000000953674316
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"count":120,
+			"max":[
+				27.16666030883789,
+				37.01036834716797,
+				9.999999046325684
+			],
+			"min":[
+				-25.83333969116211,
+				0.010370731353759766,
+				-10.000000953674316
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			],
 			"type":"VEC3"
 		},
@@ -451,35 +464,48 @@
 			"bufferView":1,
 			"componentType":5126,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"count":217,
 =======
 			"count":120,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"count":120,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"count":217,
 =======
 			"count":120,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"count":120,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"count":804,
 =======
 			"count":636,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"count":636,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"type":"SCALAR"
 		},
 		{
 			"bufferView":4,
 			"componentType":5126,
+<<<<<<< HEAD
 <<<<<<< HEAD
 			"count":35780,
 			"max":[
@@ -503,6 +529,18 @@
 				-7.533233642578125,
 				-7.918510437011719
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"count":11140,
+			"max":[
+				-8.756797790527344,
+				0.07187652587890625,
+				7.91862154006958
+			],
+			"min":[
+				-24.593929290771484,
+				-7.533233642578125,
+				-7.918510437011719
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			],
 			"type":"VEC3"
 		},
@@ -510,28 +548,39 @@
 			"bufferView":5,
 			"componentType":5126,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"count":35780,
 =======
 			"count":11140,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"count":11140,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"type":"VEC3"
 		},
 		{
 			"bufferView":6,
 			"componentType":5126,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"count":35780,
 =======
 			"count":11140,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"count":11140,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"type":"VEC2"
 		},
 		{
 			"bufferView":7,
 			"componentType":5123,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"count":211314,
 =======
+=======
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"count":66420,
 			"type":"SCALAR"
 		},
@@ -1001,7 +1050,10 @@
 			"bufferView":60,
 			"componentType":5123,
 			"count":1038,
+<<<<<<< HEAD
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"type":"SCALAR"
 		}
 	],
@@ -1009,15 +1061,20 @@
 		{
 			"buffer":0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"byteLength":2604,
 =======
 			"byteLength":1440,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"byteLength":1440,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 			"byteLength":2604,
 			"byteOffset":2604,
@@ -1025,13 +1082,21 @@
 			"byteLength":1440,
 			"byteOffset":1440,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"byteLength":1440,
+			"byteOffset":1440,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"target":34962
 		},
 		{
 			"buffer":0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"byteLength":1736,
 			"byteOffset":5208,
+=======
+			"byteLength":960,
+			"byteOffset":2880,
 =======
 			"byteLength":960,
 			"byteOffset":2880,
@@ -1063,6 +1128,262 @@
 		},
 		{
 			"buffer":0,
+			"byteLength":132840,
+			"byteOffset":361592,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":4656,
+			"byteOffset":494432,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":4656,
+			"byteOffset":499088,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2076,
+			"byteOffset":503744,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":3780,
+			"byteOffset":505820,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3780,
+			"byteOffset":509600,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2304,
+			"byteOffset":513380,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":2256,
+			"byteOffset":515684,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2256,
+			"byteOffset":517940,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2280,
+			"byteOffset":520196,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":11472,
+			"byteOffset":522476,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":11472,
+			"byteOffset":533948,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":7648,
+			"byteOffset":545420,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3720,
+			"byteOffset":553068,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":163944,
+			"byteOffset":556788,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":163944,
+			"byteOffset":720732,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":109296,
+			"byteOffset":884676,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":41304,
+			"byteOffset":993972,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":3288,
+			"byteOffset":1035276,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3288,
+			"byteOffset":1038564,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3264,
+			"byteOffset":1041852,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":4212,
+			"byteOffset":1045116,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":4212,
+			"byteOffset":1049328,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3264,
+			"byteOffset":1053540,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":2604,
+			"byteOffset":1056804,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2604,
+			"byteOffset":1059408,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1736,
+			"byteOffset":1062012,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1608,
+			"byteOffset":1063748,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":429360,
+			"byteOffset":1065356,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":429360,
+			"byteOffset":1494716,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":286240,
+			"byteOffset":1924076,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":422628,
+			"byteOffset":2210316,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":2304,
+			"byteOffset":2632944,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2304,
+			"byteOffset":2635248,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1536,
+			"byteOffset":2637552,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
+			"target":34962
+		},
+		{
+			"buffer":0,
+<<<<<<< HEAD
+			"byteLength":1272,
+			"byteOffset":3840,
+=======
+			"byteLength":744,
+			"byteOffset":2639088,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
+			"target":34963
+		},
+		{
+			"buffer":0,
+<<<<<<< HEAD
+			"byteLength":133680,
+			"byteOffset":5112,
+=======
+			"byteLength":1704,
+			"byteOffset":2639832,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
+			"target":34962
+		},
+		{
+			"buffer":0,
+<<<<<<< HEAD
+			"byteLength":133680,
+			"byteOffset":138792,
+=======
+			"byteLength":1704,
+			"byteOffset":2641536,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
+			"target":34962
+		},
+		{
+			"buffer":0,
+<<<<<<< HEAD
+			"byteLength":89120,
+			"byteOffset":272472,
+=======
+			"byteLength":1136,
+			"byteOffset":2643240,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
+			"target":34962
+		},
+		{
+			"buffer":0,
+<<<<<<< HEAD
 			"byteLength":132840,
 			"byteOffset":361592,
 			"target":34963
@@ -1322,6 +1643,8 @@
 			"byteLength":422628,
 			"byteOffset":1153512,
 =======
+=======
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"byteLength":660,
 			"byteOffset":2644376,
 			"target":34963
@@ -1408,17 +1731,24 @@
 			"buffer":0,
 			"byteLength":2076,
 			"byteOffset":3285764,
+<<<<<<< HEAD
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"byteLength":1576140,
 =======
 			"byteLength":3287840,
 >>>>>>> e9cb33a (deutsche links gefixt)
+=======
+			"byteLength":3287840,
+>>>>>>> 4f1b0df9b0543af206f79a594e62df9bdd20688f
 			"uri":"MagnetHalterL.bin"
 		}
 	]
