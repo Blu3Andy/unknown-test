@@ -181,7 +181,7 @@ export function showModel6()
 export function showModel7()
 {
   scene.remove(currentModel);
-  renderObject('MagnetMitteUnterstützung.gltf');
+  renderObject('MagnetMitteUnterstuetzung.gltf');
 }
 
 function getAnimation(name)

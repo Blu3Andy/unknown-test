@@ -15,7 +15,7 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Mittenunterst\u00fctzung-Body",
+			"name":"Mittenunterstuetzung-Body",
 			"scale":[
 				0.03516721352934837,
 				0.03516721352934837,
@@ -54,7 +54,7 @@
 	],
 	"meshes":[
 		{
-			"name":"Mittenunterst\u00fctzung-Body",
+			"name":"Mittenunterstuetzung-Body",
 			"primitives":[
 				{
 					"attributes":{
@@ -200,7 +200,7 @@
 	"buffers":[
 		{
 			"byteLength":512800,
-			"uri":"MagnetMitteUnterst%C3%BCtzung.bin"
+			"uri":"MagnetMitteUnterstuetzung.bin"
 		}
 	]
 }
