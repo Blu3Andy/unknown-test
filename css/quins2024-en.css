@@ -2509,8 +2509,6 @@
 .uui-heroheader06_image-01 {
   width: 48rem;
   min-width: 48rem;
-  border: .25rem solid var(--untitled-ui-gray900);
-  border-radius: .625rem;
   position: absolute;
   top: 0%;
   bottom: 0%;

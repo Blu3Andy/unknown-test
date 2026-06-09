@@ -2608,7 +2608,6 @@
   width: 48rem;
   min-width: 48rem;
   border: .25rem solid var(--untitled-ui-gray900);
-  border-radius: .625rem;
   position: absolute;
   top: 0%;
   bottom: 0%;
@@ -3023,7 +3022,6 @@
   width: 100%;
   max-width: 48rem;
   border: .25rem solid var(--untitled-ui-gray900);
-  border-radius: .625rem;
 }
 
 .uui-heroheader19_image.shadow-xlarge.is-graphic {
