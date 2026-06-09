@@ -491,13 +491,16 @@
         grid-row-start: 1;
         grid-row-end: 3;
 
+        height: 400px;
         min-width: 400px;
 
-        text-align: center;
+        text-align: left;
         font-size: 22px;
         letter-spacing: 0.05em;
         line-height: 1.1;
         padding: 20px;
+
+        padding: 10px; margin: auto; box-shadow: 10px 10px 20px #58626d; border-radius: 0.25rem; max-width: 400px;
       }
 
       .window3{
@@ -582,7 +585,7 @@
     <div class="uui-page-padding-9">
       <div class="uui-container-large-8">
         <div class="uui-padding-vertical-xhuge-8">
-          <h1 class="uui-heading-xlarge">Zubehör</h1>
+          <h2 class="uui-heading-xlarge" style="padding: 1rem;" id="partName">Magnetstopper: 1 Stück</h2>
           <div class="kleinTeilContainer">
             <div class="window1">
               <div class = "model" id="threejs-container" style=" max-width: 800px; margin-top: 20px auto 0;">
@@ -593,15 +596,16 @@
               </div>
             </div>
             <div class="window2">
-              <div style="display: flex; height:100%">
-                <article id="partText" style="display: inline-block; align-self: flex-end; white-space: pre-line; word-wrap:break-word">
-                  Universelle  Haltevorrichtung für alle Quins LC  Modelle <br/> (Quins Pro / Quins Ultimate) ausgestattet mit Magentfuß. Additives Fertigungsverfahren (ESD Safe)
+              <div >
+                <!-- the brackets are so weird because the standard text would otherwhise have a weird spacing, it disapears once you selected something but ehh -->
+                <article id="partText" style="display: inline-block;  white-space: pre-line; word-wrap:break-word; padding: 1rem"
+                >Universelle  Haltevorrichtung für alle Quins LC  Modelle, <br/> (Quins Pro / Quins Ultimate) ausgestattet mit Magentfuß. Additives Fertigungsverfahren (ESD Safe)
                 </article>
               </div>
               
             </div>
             <div class="window3">
-              <h2 class="uui-heading-large" id="partName">Magnetstopper: 1 Stück</h2>
+              
                 <div class="optik-slider-wrapper">
                   <!-- <button class="slider-pfeil" id="pfeilLinks" onclick="verschiebeSlider(-1)">&#8249;</button> -->
 
@@ -673,11 +677,11 @@
 
       // Map optik IDs to functions and names
       const optikActions = {
-        'optik-0': { fn: showModel1, name: 'Magnetstopper: 1 Stück', text: 'Universelle  Haltevorrichtung für alle Quins LC  Modelle \n (Quins Pro / Quins Ultimate)\n ausgestattet mit Magentfuß. Additives Fertigungsverfahren (ESD Safe)' },
-        'optik-1': { fn: showModel2, name: 'Magnethalter Tableau Box: 2 Teilig', text: 'Halte und Ausrichtungshilfe für unbestückte Leiterplatten. Passend für die Quins Tableau Box oder Tableau Schublade Einlage. Ausgestattet mit Magnethalter. \n Additives Fertigungsverfahren (ESD Safe)' },
-        'optik-2': { fn: showModel4, name: 'THT Muli-Level Halter: 6 Teilig', text: 'Erweiterbare THT-Board Haltevorrichtung für unsere Quins Pro und Quins Ultimate. Speziell entwickelt\n für sehr hohe Bauteile.\n Ausgestattet mit Magnethalter. Additives Fertigungsverfahren (ESD Safe)' },
-        'optik-3': { fn: showModel6, name: 'Spezialhalter: 2 Stück', text: 'Entwickelt für Leiterplatten mit Randbestückung oder Sonderformen. Erweiterbar für jedes Qins Pro und Quins Ultimate Inspektionssystem. Einfache Montage durch Gleitmutter und Rändelschraube. Additives Fertigungsverfahren (ESD Safe)' },
-        'optik-4': { fn: showModel7, name: 'Mittenunterstützung: 1 Stück', text: 'Konzipiert für sehr große Boards. Verhindert ein "durchliegen" der Leiterplatte während der Prüfung. Einfache Montage durch Magnetfuß. Passend für Quins Pro und Quins Ultimate.\n Additives Fertigungsverfahren (ESD Safe)' },
+        'optik-0': { fn: showModel1, name: 'Magnetstopper: 1 Stück', text: 'Universelle  Haltevorrichtung für alle Quins LC  Modelle, \n (Quins Pro / Quins Ultimate)\n ausgestattet mit Magentfuß. Additives Fertigungsverfahren (ESD Safe)' },
+        'optik-1': { fn: showModel2, name: 'Magnethalter Tableau Box: 2 Teilig', text: 'Halte- und Ausrichtungshilfe für unbestückte Leiterplatten. Passend für die Quins Tableau Box oder Tableau Schubladen Einlage. Ausgestattet mit Magnethalter. \n Additives Fertigungsverfahren (ESD Safe)' },
+        'optik-2': { fn: showModel4, name: 'THT Muli-Level Halter: 6 Teilig', text: 'Erweiterbare THT-Board Haltevorrichtung für unsere Quins Pro und Quins Ultimate Systeme. Speziell entwickelt\n für sehr hohe Bauteile.\n Ausgestattet mit Magnethalter. Additives Fertigungsverfahren (ESD Safe)' },
+        'optik-3': { fn: showModel6, name: 'Spezialhalter: 2 Stück', text: 'Entwickelt für Leiterplatten mit Randbestückung oder Sonderformen. Erweiterbar für jedes Quins Pro und Quins Ultimate Inspektionssystem. Einfache Montage durch Gleitmutter und Rändelschraube. \nAdditives Fertigungsverfahren (ESD Safe)' },
+        'optik-4': { fn: showModel7, name: 'Mittenunterstützung: 1 Stück', text: 'Konzipiert für sehr große Boards. Verhindert ein "durchliegen" der Leiterplatte während der Prüfung. Einfache Montage durch Magnetfuß. Passend für Quins Pro und Quins Ultimate Systeme.\n Additives Fertigungsverfahren (ESD Safe)' },
       };
 
       
