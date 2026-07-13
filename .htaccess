@@ -1,0 +1,51 @@
+# -----------------------------------------------
+# 1) www-Redirect: alle Varianten → https://www.quins.de/
+# -----------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # http://quins.de → https://www.quins.de
+    # http://www.quins.de → https://www.quins.de
+    # https://quins.de → https://www.quins.de
+
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+    RewriteRule ^ https://www.%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# -----------------------------------------------
+# 2) GZip + Brotli Komprimierung
+# -----------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------
+# 3) BROTLI-Komprimierung (mod_brotli)
+#    Bessere Komprimierungsrate als GZip, nur über HTTPS
+#    Falls dieser Block einen 500-Fehler verursacht → entfernen,
+#    GZip (Block 2) reicht dann als Fallback vollständig aus.
+# ---------------------------------------------------------------
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html
+    AddOutputFilterByType BROTLI_COMPRESS text/plain
+    AddOutputFilterByType BROTLI_COMPRESS text/css
+    AddOutputFilterByType BROTLI_COMPRESS text/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/json
+    AddOutputFilterByType BROTLI_COMPRESS application/xml
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------
+# ENDE der Konfiguration
+# ---------------------------------------------------------------
