@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUINS Pro - Modularer Header System</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/quins2024.css">
+  
+  <!-- 
+    WICHTIG - CORS & Lokaler Server:
+    ================================
+    Dieses System funktioniert NICHT mit file:// Protokoll!
+    Der Fetch-Request wird durch die Browser-Sicherheitsrichtlinien blockiert.
+    
+    Lösung: Einen lokalen Webserver verwenden:
+    
+    Option 1 (VS Code):
+      - Installiere die Extension "Live Server"
+      - Klick auf "Go Live" im Status-Bar unten rechts
+      - Öffne http://localhost:5500 (oder die angezeigte Port)
+    
+    Option 2 (Python):
+      - python -m http.server 8000
+      - Öffne http://localhost:8000
+    
+    Option 3 (Node.js):
+      - npx http-server
+      - Öffne http://localhost:8080
+  -->
+</head>
+<body>
+  <!-- Header wird hier via JavaScript geladen -->
+  <div data-include="components/header.html"></div>
+
+  <!-- Hauptinhalt -->
+  <main style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+    <section>
+      <h1>Willkommen bei QUINS Pro</h1>
+      <p>
+        Dieses System demonstriert, wie du HTML-Komponenten dynamisch laden kannst,
+        statt sie in 52 verschiedenen Dateien zu duplizieren.
+      </p>
+      
+      <h2>Wie funktioniert es?</h2>
+      <ol>
+        <li>
+          <strong>Komponenten erstellen:</strong> 
+          Lege HTML-Dateien im `components/`-Ordner an (z.B. `header.html`, `footer.html`)
+        </li>
+        <li>
+          <strong>Placeholder einfügen:</strong> 
+          Füge `&lt;div data-include="components/header.html"&gt;&lt;/div&gt;` ein
+        </li>
+        <li>
+          <strong>Script einbinden:</strong> 
+          Füge `&lt;script src="js/load-components.js" defer&gt;&lt;/script&gt;` ein
+        </li>
+        <li>
+          <strong>Fertig!</strong> 
+          Der Header wird automatisch beim Laden der Seite eingefügt
+        </li>
+      </ol>
+
+      <h2>Vorteile dieses Ansatzes:</h2>
+      <ul>
+        <li>✓ Zentrale Verwaltung: Ändere den Header nur an einer Stelle</li>
+        <li>✓ Keine Code-Duplizierung: Sparen Sie 51 Kopien</li>
+        <li>✓ Wartbar: Updates betreffen alle Seiten automatisch</li>
+        <li>✓ Vanilla JavaScript: Kein Framework, keine Build-Tools notwendig</li>
+        <li>✓ Kleine Dateigröße: Nur ~2KB JavaScript</li>
+      </ul>
+
+      <h2>Migration zu diesem System:</h2>
+      <p>
+        Für jede deiner 52 HTML-Dateien:
+      </p>
+      <ol>
+        <li>Entferne den kompletten Header-HTML-Code (die ~450 Zeilen)</li>
+        <li>Ersetze ihn mit: `&lt;div data-include="components/header.html"&gt;&lt;/div&gt;`</li>
+        <li>Füge am Ende des `&lt;body&gt;` ein: `&lt;script src="js/load-components.js" defer&gt;&lt;/script&gt;`</li>
+      </ol>
+      <p>
+        Fertig! Jetzt kannst du den Header zentral verwalten.
+      </p>
+
+      <h2>Beispiel (Vorher vs. Nachher):</h2>
+      <pre style="background: #f5f5f5; padding: 15px; border-radius: 4px; overflow-x: auto;">
+<!-- Vorher: ~450 Zeilen -->
+&lt;div data-w-id="..." class="uui-navbar02_component w-nav"&gt;
+  ... 450+ Zeilen HTML ...
+&lt;/div&gt;
+
+<!-- Nachher: 1 Zeile! -->
+&lt;div data-include="components/header.html"&gt;&lt;/div&gt;
+      </pre>
+
+      <h2>Weitere Komponenten erstellen:</h2>
+      <p>Du kannst das gleiche System für andere Teile nutzen:</p>
+      <ul>
+        <li>`components/footer.html` - für einen Footer</li>
+        <li>`components/sidebar.html` - für eine Seitenleiste</li>
+        <li>`components/breadcrumb.html` - für Breadcrumbs</li>
+        <li>Alles was du magst!</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Script MUSS am Ende des Body sein und defer verwenden! -->
+  <script src="js/load-components.js" defer></script>
+</body>
+</html>
