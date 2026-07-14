@@ -878,6 +878,19 @@
   padding-bottom: 7rem;
 }
 
+.uui-padding-vertical-medium {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.uui-padding-vertical-bottom {
+  padding-bottom: 4rem;
+}
+
+.uui-padding-vertical-top {
+  padding-top: 4rem;
+}
+
 .uui-container-large-2 {
   width: 100%;
   max-width: 80rem;
@@ -3900,10 +3913,17 @@
     align-items: stretch;
   }
 
+  .uui-padding-vertical-medium {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
   .uui-padding-vertical-xhuge {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
+
+  
 
   .uui-page-padding-2 {
     padding-left: 1rem;
