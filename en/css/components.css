@@ -1029,6 +1029,15 @@ textarea.w-select {
 .w-slider-nav-invert > div.w-active {
   background-color: #222;
 }
+.w-slider-nav-dark > div {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.w-slider-nav-dark > div.w-active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.w-slider-nav-dark > div:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .w-slider-dot {
   position: relative;
   display: inline-block;
@@ -1086,6 +1095,24 @@ textarea.w-select {
 .w-slider-arrow-right {
   z-index: 4;
   left: auto;
+}
+.w-slider-arrow-left-dark,
+.w-slider-arrow-right-dark {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #111;
+}
+.w-slider-arrow-left-dark:hover,
+.w-slider-arrow-right-dark:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+.w-slider-arrow-left-dark:focus,
+.w-slider-arrow-right-dark:focus {
+  box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.2);
+}
+.w-slider-arrow-left-dark .w-icon-slider-left,
+.w-slider-arrow-right-dark .w-icon-slider-right {
+  color: #111;
 }
 .w-icon-slider-left,
 .w-icon-slider-right {

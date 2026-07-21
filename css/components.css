@@ -938,6 +938,16 @@ textarea.w-select {
   position: relative;
   height: 300px;
   text-align: center;
+  background: #ffffff;
+  clear: both;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.w-slider-mount{
+  position: relative;
+  height: 500px;
+  text-align: center;
   background: #dddddd;
   clear: both;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -964,6 +974,17 @@ textarea.w-select {
   white-space: nowrap;
 }
 
+.w-slider-mask-mount {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 50%;
+  white-space: nowrap;
+}
+
 .w-slider-mask-fat {
   position: relative;
   display: block;
@@ -975,6 +996,16 @@ textarea.w-select {
   white-space: nowrap;
 }
 .w-slide {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  text-align: left;
+}
+
+.w-slide-mount {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1028,6 +1059,15 @@ textarea.w-select {
 }
 .w-slider-nav-invert > div.w-active {
   background-color: #222;
+}
+.w-slider-nav-dark > div {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.w-slider-nav-dark > div.w-active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.w-slider-nav-dark > div:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .w-slider-dot {
   position: relative;
@@ -1086,6 +1126,19 @@ textarea.w-select {
 .w-slider-arrow-right {
   z-index: 4;
   left: auto;
+}
+.w-slider-arrow-left-dark,
+.w-slider-arrow-right-dark {
+  
+  color: #111;
+}
+.w-slider-arrow-left-dark:hover,
+
+.w-slider-arrow-left-dark:focus,
+
+.w-slider-arrow-left-dark .w-icon-slider-left,
+.w-slider-arrow-right-dark .w-icon-slider-right {
+  color: #111;
 }
 .w-icon-slider-left,
 .w-icon-slider-right {

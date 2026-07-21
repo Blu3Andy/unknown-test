@@ -2984,6 +2984,11 @@
   max-height: none;
 }
 
+.slider-mount {
+  height: 80vh;
+  max-height:1000px;
+}
+
 .slide-9 {
   background-image: url('../images/quins-pro_detail-30.jpg');
   background-position: 50%;
