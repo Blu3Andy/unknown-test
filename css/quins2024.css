@@ -2774,6 +2774,15 @@
   display: grid;
 }
 
+.uui-layout02_component_2 {
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  
+  align-items: center;
+  display: grid;
+}
+
 .uui-heading-xxsmall-5 {
   color: var(--untitled-ui-gray900);
   letter-spacing: normal;
@@ -4047,6 +4056,12 @@
     padding: 0;
   }
 
+  .uui-layout02_image-wrapper_2 {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    
+  }
+
   .uui-layout02_component {
     min-height: auto;
     grid-column-gap: 3rem;
@@ -4748,6 +4763,13 @@
   .uui-layout77_list {
     grid-row-gap: 2.5rem;
     grid-template-columns: 1fr;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .uui-layout77_list_2 {
+    grid-row-gap: 2.5rem;
+    grid-template-columns: 2fr;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
